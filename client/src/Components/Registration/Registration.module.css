@@ -1,0 +1,13 @@
+.input_cont{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.registration_cont{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

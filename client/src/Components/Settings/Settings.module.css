@@ -1,0 +1,29 @@
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.settings_cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.password_cont{
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+    width: 100%;
+}
+.password{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.change_type{
+    background-color: transparent;
+    border: none;
+
+}

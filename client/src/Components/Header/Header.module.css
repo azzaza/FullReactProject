@@ -1,0 +1,14 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 5vh;
+    min-height: 40px;
+    background-color: #1F2833 ;
+    color: #C5C6C7;
+}
+
+
+.header a{
+    color: #C5C6C7;
+}

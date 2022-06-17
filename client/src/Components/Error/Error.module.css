@@ -1,0 +1,11 @@
+.error{
+    color: blueviolet;
+    /* width: 100%; */
+    /* width: 70px; */
+    
+    /* height: 100%; */
+}
+.button_close{
+    display: flex;
+    justify-content: flex-end ;
+}

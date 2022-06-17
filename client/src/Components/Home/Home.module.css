@@ -1,0 +1,18 @@
+.main_cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home_cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.status_cont{
+    /* margin-left: 80%; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

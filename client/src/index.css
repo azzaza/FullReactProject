@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: whitesmoke;
+  height: 100vh;
+  font-family: 'Garamond';
+}
+input{
+  font-family: 'Garamond';
+}
+button{
+  font-family: 'Garamond';
+}
+button{
+  background-color: transparent;
+  border: 1px solid #66FCF1;
+  color: #C5C6C7;
+} 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

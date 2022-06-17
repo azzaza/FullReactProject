@@ -1,0 +1,6 @@
+{
+    "port" : 5000,
+    "moongose":"mongodb+srv://recru1t:yzkuk171@cluster0.9c64n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "slovo":"slovo dsd sdfsa"
+  
+}
