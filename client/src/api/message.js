@@ -11,19 +11,47 @@ export const change_M_userApi = (token, _id) => {
             return this.get('/create/'+id)
                 .catch((e) => Error(e, dispatch))
         },
-        get_message: function(id,dispatch)  {
-            // console.log(params);
-            return this.get(id)
-                .catch((e) => Error(e, dispatch))
-        },
+        // get_message: function(id,dispatch)  {
+        //     // console.log(params);
+        //     return this.get(id)
+        //         .catch((e) => Error(e, dispatch))
+        // },
         get_users:function(dispatch){
             return this.get()
                 .catch((e) => Error(e, dispatch))
         },
+        get_message: function(id,dispatch)  {
+                // console.log(id);
+                return this.get('/message/'+id)
+                    .catch((e) => Error(e, dispatch))
+            },
+
+
+
+
+
+
+
         send_message: function(data,dispatch){
             return this.post('/', ...axios_create(data))
                 .catch((e) => Error(e, dispatch))
+        },
+        post_id:function(data,dispatch){
+            return this.post('/post_id', ...axios_create(data))
+            .catch((e) => Error(e, dispatch))
+        },
+        remove:function(_id,dispatch){
+            return this.post('/remove',...axios_create({id:_id}))
+            .catch((e) => Error(e, dispatch))
+        },
+        save_text:function(data){
+            return this.post('/textMessage',...axios_create(data))
+            //.catch((e) => Error(e, dispatch))
         }
+        // save_text:function(data,dispatch){
+        //     return this.post('/textMessage',...axios_create(data))
+        //     .catch((e) => Error(e, dispatch))
+        // }
     })
 }
 

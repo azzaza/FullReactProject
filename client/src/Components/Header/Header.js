@@ -11,7 +11,7 @@ const Header=(props)=>{
       props.R_FU_USER_LOG_OUt()
 
   }
-  console.log(props.user);
+  // console.log(props.user);
   const homePage ='/home/' + (props.user ? props?.user?.page_name : '')
 
     return <header className={C.header}>

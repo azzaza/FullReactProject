@@ -17,7 +17,7 @@ const users_R={
 export const UsersRedux=(state=users_R,action)=>{
     switch(action.type){
         case D.GET_USERS:
-            console.log(action);
+            // console.log(action);
             return {...state,users:action.all_users}
         case D.SET_PARAMS:
             return {...state,params:action.params}
@@ -33,7 +33,7 @@ export const R_FU_USERS_PARAMS_SET=(params)=>({type:D.SET_PARAMS,params})
 
 export const get_users=(params)=>dispatch=>{
     return users.get_users(dispatch,params).then(e=>{
-        console.log(e.data);
+        // console.log(e.data);
         dispatch(R_FU_USERS_GET(e.data.users))
     })
 }

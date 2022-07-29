@@ -5,19 +5,19 @@ import { HashRouter as Router } from 'react-router-dom';
 import App_container from './App_container';
 import { Provider } from 'react-redux'
 import store from './redux/index'
+import Test from './Components/Test/Test';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Router>
-    <Provider store={store}>
+    {/* <Provider store={store}>
       <App_container />
-    </Provider>
+    </Provider> */}
+    <div>12</div>
     
   </Router>
     
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();

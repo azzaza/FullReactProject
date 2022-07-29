@@ -2,6 +2,7 @@
     display: flex;
     height: 100%
 }
+
 .users_cont{
     display: flex;
     align-items: center;
@@ -20,6 +21,7 @@
     width: 100%;
     height:91% ;
 }
+
 .user{
     margin: 10px;
     height: 50px;
@@ -32,25 +34,80 @@
 .chat_cont{
     position: relative;
     width: 70vw;
-    
+    height: 100%;
 }
 .buttom_men{
-    height: 8%;
-    position: absolute;
+    height: 48px;
+    /* position: absolute; */
     width: 100%;
-    bottom: 0;
+    /* bottom: 0; */
     border-top: 1px solid #66FCF1;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 .top_men{
-    position: absolute;
-    top: 0;
+    /* position: absolute; */
+    /* top: 0; */
     width: 100%;
-    height: 5%;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     border-bottom: 1px solid #66FCF1;
+}
+.chat{
+    display: flex;
+    height: calc(100vh - 130px);
+    /* margin-top: 7%; */
+    flex-direction: column;
+    overflow-y: scroll;
+
+
+}
+
+.message {
+     margin: 10px;
+    display: flex;
+    min-width: 200px;
+    max-width: 70%;
+    min-height: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+    border: 1px solid #66FCF1;
+}
+.message p{
+    width: 100%;
+}
+.chat_my{
+   
+    align-self: flex-end;
+    text-align: right;
+
+}
+
+.chat_other{
+   
+    align-self: flex-start;
+    /* justify-content: flex-end; */
+    
+}
+
+.active{
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.C_chat {
+   
+    /* width: 100%; */
+    display:  flex;
+    flex-direction: column;
+   
+}
+
+.C_chat.active {
+     background-color: rgba(12, 14, 64, 0.297);
+}
+.C_chat div {
+    padding: 0 10px;
 }

@@ -24,7 +24,6 @@ import { connect } from "react-redux";
   
 
 
-
 return <Routes>
 
    {props.isUser 

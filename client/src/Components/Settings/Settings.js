@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useDeferredValue, useEffect, useState } from "react";
 import Avatar from "./Avatar";
 import Password from './Password'
 import C from './Settings.module.css'
@@ -141,6 +141,7 @@ const Set = ({ name, data, regxp, setUser, user, error }) => {
 
     const [active, setActive] = useState(false)
     const [val, setVal] = useState(data)
+    const value  = useDeferredValue(val) 
 
     const double_click = () => {
         setActive(true)
@@ -164,7 +165,7 @@ const Set = ({ name, data, regxp, setUser, user, error }) => {
     }
     return <div>
         {active
-            ? <input autoFocus={true} onChange={input_change} onBlur={input_onblur} value={val} type={name} />
+            ? <input autoFocus={true} onChange={input_change} onBlur={input_onblur} value={value} type={name} />
             : <p onDoubleClick={double_click}>{data}</p>
         }
         {Error ? <p>{Error}</p> : <></>}

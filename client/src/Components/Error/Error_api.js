@@ -20,7 +20,7 @@ const Error_api = ({clearError, error }) => {
 
     },
   };
-  console.log(error);
+  // console.log(error);
 
 
 

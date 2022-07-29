@@ -1,0 +1,21 @@
+.rch{
+    z-index: 4;
+    background-color: transparent;
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid #66FCF1;
+    width: 100px;
+    height: 200px;
+    
+}
+.menuOption{
+    width: calc(100% - 1px);
+    height: 20px;
+    text-align: center;
+    border: 1px solid #66FCF1;
+}

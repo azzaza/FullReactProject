@@ -1,14 +1,26 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import C from './Home.module.css'
 
 
 const Home=(props)=>{
-
-    const mesage_click=()=>{
-        // console.log(props.home._id);
+// const [isNewChat, setNewChat] = useState(false)
+const navigate = useNavigate()
+    const mesage_click=(e)=>{
+        e.preventDefault()
         props.create_chat(props.home._id)
-        
+        .then(e=>{
+            // console.log(e);
+            if(e.status==201){
+                // console.log(e.data);
+                navigate( '/mesager/'+props?.home?.page_name,{state : 'asd'})
+                // window.history.pushState(null, null, '/#/mesager/'+props?.home?.page_name);
+                
+                // e.stopPropagation()
+            }
+            
+        })
+        // console.log(props.home._id);
     }
 
 

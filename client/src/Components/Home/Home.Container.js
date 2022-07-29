@@ -1,12 +1,17 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate
+} from "react-router-dom";
 import { get_home } from "../../redux/Home/Home.redux";
 import { create_chat } from "../../redux/Message/Message.redux";
 import Home from './Home'
 
 const Home_Container=(props)=>{
     const user_id=useParams()
+    // const history = createBrowserHistory()
+   
+
+
 
    useEffect(()=>{
     //    console.log(user_id.id);

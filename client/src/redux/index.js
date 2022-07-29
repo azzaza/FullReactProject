@@ -6,6 +6,7 @@ import { Log_inRedux } from './Log_in/Log_in.redux'
 import { MessageRedux } from './Message/Message.redux'
 import {  UserR } from './User/User.redux'
 import { UsersRedux } from './Users/Users.redux'
+import { WebSocketRedux } from './Web_socket/Web_socket.redux'
 
 
 const allReducers = combineReducers({
@@ -13,7 +14,8 @@ const allReducers = combineReducers({
     error:ErrorRedux,
     home:HomeRedux,
     users:UsersRedux,
-    message:MessageRedux
+    message:MessageRedux,
+    ws:WebSocketRedux
     // log_in:Log_inRedux,
     
 

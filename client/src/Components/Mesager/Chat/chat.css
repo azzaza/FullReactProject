@@ -1,0 +1,32 @@
+.chat, .chat, .chat {
+    /* display: block; */
+   
+    overflow-y: auto;
+    overflow-x: hidden;
+  behavior: smooth;;
+    
+  }
+  
+
+
+
+  .chat::-webkit-scrollbar {
+    display: block;
+    /* background-color: aliceblue; */
+  }
+  
+  /* Demonstrate a "mostly customized" scrollbar
+   * (won't be visible otherwise if width/height is specified) */
+  .chat::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+
+    /* background-color: #aaa; or add it to the track */
+  }
+  
+  /* Add a thumb */
+  .chat::-webkit-scrollbar-thumb {
+    background: #66FCF1;
+    border-radius: 10px;
+  }
+  

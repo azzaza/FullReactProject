@@ -10,7 +10,7 @@ const Users_container=(props)=>{
     useEffect(()=>{
         // console.log(1);
         props.get_users(props.users.params)
-        console.log(props);
+        // console.log(props);
     },[])
     // console.log(props.users.users);
     return <Users  {...props}/>
