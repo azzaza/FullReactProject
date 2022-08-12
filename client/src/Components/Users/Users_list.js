@@ -4,9 +4,6 @@ import User_all from "./User_all";
 import SpinerHOC from "../../HOC/SpinerHOC";
 
 const Users_list=(props)=>{
-    
-    // console.log(props);
-
     return <>
 
         <div className={C.users_container} >
@@ -21,4 +18,3 @@ const Users_list=(props)=>{
 
 
 export default SpinerHOC(Users_list)
-// export default Users_list

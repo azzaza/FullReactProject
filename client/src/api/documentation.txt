@@ -1,0 +1,47 @@
+reg_log
+    post
+        /register 
+            register new acount
+        /log-in
+            log in your acaunt
+    get
+        /autorisation  
+            auto log-in  
+message
+    get 
+        /create/userid
+            create chat with user
+        /
+            get all catchs from your user
+        /message/:Userid(page_name)
+            get messages from user
+        /user/:Userid
+            get user chat
+    post
+        /
+            send message
+        /post_id
+            get all chats with current data
+        /remove
+            remove chat with user
+        /textMessage
+            save text that you haven`t send
+        /remove_message
+            remove one message
+home
+    get
+        /user 
+            get user for home
+user
+    post
+        /settings
+            change settings
+        /password
+            change password
+    get 
+        /
+            get user
+users
+    get
+        /get 
+            get all users

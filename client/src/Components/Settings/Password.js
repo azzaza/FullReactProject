@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import C from './Settings.module.css'
 
 
+
 const data={
     password:'',
     new_password:'',
@@ -33,9 +34,7 @@ const Password=(props)=>{
             setType('password')
         }
     }
-    // TODO: style | message
-    //!   413   
-    //? password | avatar home | user_list no log 
+
     return <div className={C.password_cont}>
         <input className={C.password} type='password' value={d.password} placeholder="password" onChange={input_change}/>
 

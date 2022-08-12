@@ -87,7 +87,6 @@ height: calc(100vh - 88px);
 }
 a{
     text-decoration: none;
-    color: black;
 }
 .current_page{
     border-bottom: red 1px solid;
@@ -95,7 +94,7 @@ a{
 }
 .user{
     height: 65px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
     border: black solid 1px;
     width: 30%;
     margin-top: 10px;

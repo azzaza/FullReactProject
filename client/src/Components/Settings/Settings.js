@@ -2,22 +2,14 @@ import React, { useDeferredValue, useEffect, useState } from "react";
 import Avatar from "./Avatar";
 import Password from './Password'
 import C from './Settings.module.css'
-// let Errors = {
-//     isError:false,
-//     ty
-//     text:''
-// };
+import Theme from "./Theme";
 let OldUser = null
 
 
 
 
 const Settings = (props) => {
-  
 
-
-
-    const [menu,setMenu]=useState('main')
     const [fileSrc, setFile] = useState(props.user.avatar)
     const { name, email, page_name } = props.user
 
@@ -52,9 +44,7 @@ const Settings = (props) => {
         OldUser = user;
         setComponent(Comp.main)
     }, [])
-    // console.log(OldUser);
     const save_click = () => {
-        // const data = {avtar : File}
         const data = {};
         user.map((e, i) => {
             if (e.data != OldUser[i].data) {
@@ -75,7 +65,8 @@ const Settings = (props) => {
       
         password : <Password {...props}/> ,
         main : <>{user.map(d => <Set {...d} setUser={setUser} user={user} key={d.name} />)}<button onClick={save_click}>Save</button></> ,
-        avatar :<><Avatar {...props}/><button onClick={save_click}>Save</button> </> 
+        avatar :<><Avatar {...props}/><button onClick={save_click}>Save</button> </> ,
+        theme:<><Theme {...props}/></>
     }    
 
     return <div>
@@ -88,6 +79,9 @@ const Settings = (props) => {
             </p>
             <p title="password" onClick={menu_click}> 
                 Password Settings
+            </p>
+            <p title="theme" onClick={menu_click}>
+                Theme Settings
             </p>
         </div>
 

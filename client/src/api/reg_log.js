@@ -29,3 +29,6 @@ export default instonsCreat(defoltURL,reg_log_Api)
 
 
 // post('ss',{data :23},{header})
+
+// npm i
+//yarn install

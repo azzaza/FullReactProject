@@ -4,14 +4,22 @@
 }
 
 .mobileMenu {
+    position: relative;
     position: fixed;
     top: 100px;
     left: 100px;
     background-color: rgba(0, 0, 0, 0.3);
     border: 1px solid #66FCF1;
     width: 100px;
-    height: 200px;
+    /* height: 200px; */
     
+}
+.close{
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    top:-30px;
 }
 .menuOption{
     width: calc(100% - 1px);

@@ -3,19 +3,22 @@
   background-color: #0B0C10 ;
   color: #C5C6C7;
 }
-
-
-
-.div a{
-  color: #e4e4e4;
-}
-
-.div input{
+button{
+  font-family: 'Garamond';
   background-color: transparent;
   border: 1px solid #66FCF1;
   color: #C5C6C7;
-}
-/* .app{ */
-  /* height:  100vw;
-  szdasd
+} 
+
+
+/* .div a{
+  color: #e4e4e4;
 } */
+
+/* .div input{
+  background-color: transparent;
+  border: 1px solid #66FCF1;
+  border:1px solid #1b0067;
+  color: #C5C6C7;
+}
+ */

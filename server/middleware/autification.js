@@ -11,7 +11,6 @@ module.exports =async (req,res,next) => {
         const token = req.headers.autorization;
        
         const dataUser = await jwt.verify(token,config.get('slovo'),(err,ans)=>({err,ans}))
-        // console.log(dataUser.err);
          if(dataUser.err) return res.status(400).json({
              message : 'token not life'
          })

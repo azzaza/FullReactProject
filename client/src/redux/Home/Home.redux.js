@@ -28,10 +28,10 @@ const R_FU_HOME_SET=(home_user)=>({type:D.SET_USER,home_user})
 
 
 export const get_home=(id)=>dispatch=>{
-    // console.log(id);
+
     return home.get_home(id,dispatch)
     .then(e=>{
-        // console.log(e);
+
         dispatch(R_FU_HOME_SET(e.data.user))
     })
 }

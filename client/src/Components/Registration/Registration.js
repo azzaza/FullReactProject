@@ -1,21 +1,12 @@
-import React, { useContext, useState } from "react";
-
+import React, { useState } from "react";
 import C from '../Registration/Registration.module.css'
 import { connect } from 'react-redux'
 import { registration } from "../../redux/User/User.redux";
 import { R_FU_ERROR_SET } from "../../redux/Error/Error.redux";
 import { NavLink } from "react-router-dom";
 
-const form = {
-    name : 'User2' ,
-    email : 'asda@asdasd.asdw',
-    password : '222222222222',
-    conformPassword : '222222222222'
-}
 const Registration=(props)=>{
-    // const http = useContext(User)
-    // console.log(value);
-     const [formV,setFormV]=useState(form)
+     const [formV,setFormV]=useState({})
     const change_input=(e)=>{
         const key=e.target.placeholder
         setFormV({...formV, [key]:e.target.value})
@@ -32,13 +23,7 @@ const Registration=(props)=>{
         props.registration(formV)
         .catch(e.preventDefault)
         
-
-        // http.request('post','/reg/log/register',formV) 
     }
-    
-    console.log(props);
-    // if(false) return <Re
-    // console.log(formV);
     return <div className={C.registration_cont}>
         <div className={C.input_cont}>
             <input type='text' placeholder="name" value={formV.name} onChange={change_input}/>

@@ -1,18 +1,10 @@
 import Header from './Components/Header/Header';
-import {
-  Routes,
-  Route,
-
-} from "react-router-dom";
+import React from 'react';
 import './App.css';
-import Registration from './Components/Registration/Registration';
-import Log_in from './Components/Log_in/Log_in';
 import Routs  from './Components/Routs/Routs';
 import Error_api from './Components/Error/Error_api';
-import { useEffect, useState } from 'react';
-import { connect } from 'react-redux';
-import { R_FU_ERROR_SET } from './redux/Error/Error.redux';
-// import user from '../../server/models/user';
+import { useEffect } from 'react';
+
 
 const shemaError = {
   message : 'text',
@@ -21,7 +13,6 @@ const shemaError = {
 
 
 function App(props) {
-
   const clearError = ()=>props.R_FU_ERROR_SET('',null,false)
 
   useEffect(()=>{
@@ -33,12 +24,12 @@ function App(props) {
     <div className='app'>
       
         <Header/>
-        <div className='div'>
+        <div className='div'  style={{
+          background:  props.settings.themaMain,
+          color:props.settings.themaText,           
+          }
           
-          {/* <Routes>
-            <Route  path='/register' element={<Registration/>}/>
-            <Route  path='/log-in' element={<Log_in/>}/>
-          </Routes> */}
+          }>
                  <Routs isUser={props.user}  />
         </div>
         <Error_api  clearError={clearError} error={props.error}/>
@@ -46,12 +37,4 @@ function App(props) {
   );
 }
 
-const mapStateToProps = state => {
-    
-  return {
-    user:state.user,
-     error:state.error
-  }
-}
-
-export default connect(mapStateToProps,{R_FU_ERROR_SET})(App);
+export default App;

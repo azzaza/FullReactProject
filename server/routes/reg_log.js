@@ -6,7 +6,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken')
 const config = require('config');
 const auto = require('../middleware/autification');
-// const User = require('../models/user');
+
 //reg/log
 
 
@@ -15,9 +15,7 @@ router.post(
     '/register',
 
     async (req, res) => {
-        // console.log('____________________');
-        // console.log(req.body);
-        // console.log('____________________');
+        
         try {
             
             const { email, name, password } = req.body
@@ -28,10 +26,10 @@ router.post(
             if (!errors.isEmpty()) {
                 return res.status(400).json({ errors: errors.array() });
             }
-            console.log(1);
+            
             const newUser = await User.findOne({ email })
            const page_name =( await (await User.find({})).length ) + ''
-            // console.log(page_name);
+           
             if (newUser) {
                 return res.status(405).json({
                     message: 'User with this email is  alredy created'
@@ -65,6 +63,7 @@ router.post(
         check('password', 'not password').isLength({ min: 5 })
     ],
     async (req, res) => {
+        
         try {
 
             const { email, password } = req.body
@@ -78,16 +77,11 @@ router.post(
                 })
             }
 
-            // body('email').isEmail()
-            // body('password').isLength({ min: 5 })
-            // const errors = validationResult(req);
-            // if (!errors.isEmpty()) {
-            //     return res.status(400).json({ errors: errors.array() });
-            // }
+            
 
 
             const user = await User.findOne({ email })
-
+           
             if (!user) {
                 return res.status(404).json({
                     message: 'User not find '
@@ -125,12 +119,11 @@ router.post(
         auto,
         async (req, res) => {
             try {
-            // console.log(auto);
-
+           
         const token = req.headers.autorization;
           
          const dataUser = await jwt.verify(token,config.get('slovo'),(err,ans)=>({err,ans}))
-        // console.log(dataUser.err);
+        
          if(dataUser.err) return res.status(400).json({
              message : 'token not life'
          })

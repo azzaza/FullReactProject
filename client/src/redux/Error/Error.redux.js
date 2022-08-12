@@ -21,7 +21,7 @@ export const ErrorRedux=(state=false,action)=>{
 
 
 export const R_FU_ERROR_SET=(message,code,is_open)=>{
-// console.log(message);
+
     if(message=='token not life'){
         User_Token.set(null)
         return {type:D.SET_ERROR,data:false}

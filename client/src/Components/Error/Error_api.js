@@ -20,10 +20,6 @@ const Error_api = ({clearError, error }) => {
 
     },
   };
-  // console.log(error);
-
-
-
 
 
   return <div>

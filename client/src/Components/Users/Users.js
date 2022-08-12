@@ -18,10 +18,6 @@ const Users=(props)=>{
             
         }
     return <div>
-        {/* <h1>All users</h1> */}
-        
-
-
         <div className={C.search_cont}>
             <input type='text' onChange={search_inp} value={props.users.params.name}/>
             <button onClick={search_click}>Search</button>

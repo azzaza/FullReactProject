@@ -1,24 +1,19 @@
 import React, { useMemo } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import C from './Mesager.module.css'
 
 
 const Message_users = (props) => {
-    // const navigate = useNavigate()
     const on_click = (e, _id) => {
         props.seId(_id)
         const regxp = /\/[0-9]{1,10}/gi
         let url_cur = '' + window.location
         url_cur = url_cur.replace(regxp, '')
 
-        // console.log(url_cur);
         const url = url_cur + '/' + _id
-        // console.log(url);
+
 
         window.history.pushState({}, '', url)
     }
-    ///! add url page_name push state 
-    // console.log(props.message);
 
 
 

@@ -18,9 +18,7 @@ export const SpinerData = () => {
 
 
 const SpinerHOC = Component => props => {
-//     const S = SpinerData();
- 
-//     return S.isSpiner ? <Spiner /> :  <Component S={{on:S.on,off:S.off}} {...props} />
+
     return props.isSpiner ? <Spiner /> :  <Component  {...props} />
 }
 export default SpinerHOC
